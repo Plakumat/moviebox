@@ -1,0 +1,73 @@
+.moviebox {
+    &__carousel {
+        position: relative;
+
+        &-skeleton {
+            margin: 0 0 20px 0;
+            width: 100%;
+        }
+
+        &__item {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: all-scroll;
+
+            img {
+                width: 100%;
+                height: 500px;
+                object-fit: cover;
+                filter: brightness(65%);
+            }
+
+            &__poster {
+                position: absolute;
+                bottom: 40px;
+            }
+
+            &__link {
+                color: $white;
+                text-decoration: none;
+
+                &::after {
+                    content: '>>';
+                    margin: 0 0 0 4px;
+                }
+            }
+        }
+
+        .thumb {
+            cursor: pointer;
+        }
+
+        .thumbs {
+            padding: 0 15px;
+
+            &-wrapper {
+                position: relative;
+                margin: 0 auto !important;
+                width: 100%;
+                background: linear-gradient(261deg, rgba(7,41,99,1) 0%, rgba(36,36,205,1) 35%, rgba(0,212,255,1) 100%);
+                overflow: hidden;
+            }
+        }
+
+        //TODO: Important used for override of Carousel Component
+        .carousel .control-arrow {
+            top: 13px !important;
+            padding: 0 5px;
+            height: 100% !important;
+            background-color: $transparent-black !important;
+            opacity: 1 !important;
+        }
+
+        .carousel.carousel-slider .control-arrow {
+            top: 0 !important;
+        }
+
+        .carousel .carousel-status {
+            right: 35px;
+        }
+    }
+}

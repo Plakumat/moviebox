@@ -1,0 +1,14 @@
+@use 'sass:math';
+
+/* this font-size mixin works for calculate and set four options of font styling */
+
+$rem-baseline: 16;
+
+@mixin font-size($size: $rem-baseline, $line: $size * 1.6) {
+	font-size: $size + px;
+	font-size: math.div($size, $rem-baseline) + rem;
+	line-height: ($line) + px;
+	line-height: math.div($line, $rem-baseline) + rem;
+	font-feature-settings: "kern"1;
+	font-kerning: normal;
+}
