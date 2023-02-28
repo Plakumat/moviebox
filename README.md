@@ -2,6 +2,10 @@
 
 Moviebox project is a mock data application made to list current and trending movies.
 
+[Demo Link](https://moviebox-one.vercel.app/)
+
+![Project Image](https://github.com/Plakumat/moviebox/blob/main/demo.png?raw=true)
+
 ## Tech Tools
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
