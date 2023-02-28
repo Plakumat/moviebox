@@ -84,7 +84,7 @@ const Categories: React.FC = () => {
       <div className='moviebox__categories__item__box' key={index}>
         <LazyLoadImage
           className='moviebox__categories__item__poster'
-          src={BaseImageURL + movie.poster_path}
+          src={BaseImageURL + poster_path}
           effect='blur'
           alt='movie-poster'
         />
@@ -106,15 +106,16 @@ const Categories: React.FC = () => {
   return (
     <div className='moviebox__categories'>
       <Container flexDirection='column'>
-        {genreList.map((genre: IGenreTypes, genreIndex: number) =>
-          genreIndex! < API_LIMIT ? (
-            <div className='moviebox__categories__item' key={genre.id}>
-              <p className='moviebox__categories__item__title'>{genre.name}</p>
+        {genreList.map((genre: IGenreTypes, genreIndex: number) => {
+          const { id, name } = genre;
+          return genreIndex! < API_LIMIT ? (
+            <div className='moviebox__categories__item' key={id}>
+              <p className='moviebox__categories__item__title'>{name}</p>
               {movieWithGenre && (
                 <Carousel
                   infinite={true}
                   responsive={CarouselResponsive}
-                  key={genre.id}
+                  key={id}
                   centerMode={carouselCenter}
                 >
                   {movieWithGenre[genreIndex]?.results.map(
@@ -127,8 +128,8 @@ const Categories: React.FC = () => {
                 </Carousel>
               )}
             </div>
-          ) : null
-        )}
+          ) : null;
+        })}
       </Container>
     </div>
   );

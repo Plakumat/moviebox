@@ -29,11 +29,14 @@ function Home() {
     const { results } = popularMovies;
     if (results)
       results.forEach((movie) => {
+        const { id, backdrop_path, title } = movie;
+
         popularBackDrops.push({
-          movieId: movie.id,
-          movieImage: BaseImageURL + movie.backdrop_path,
-          movieTitle: movie.title,
+          movieId: id,
+          movieImage: BaseImageURL + backdrop_path,
+          movieTitle: title,
         });
+
         setPopularBackDrops([...popularBackDrops]);
       });
   }, [popularMovies]);

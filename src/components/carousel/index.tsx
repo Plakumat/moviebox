@@ -21,15 +21,17 @@ const MovieCarousel: React.FC<ICarouselProps> = (props: ICarouselProps) => {
         swipeable={true}
         emulateTouch={true}
       >
-        {posters &&
-          posters.map((poster, index) => (
+        {posters.map((poster, index) => {
+          const { movieImage, movieTitle, movieId } = poster;
+
+          return (
             <div className='moviebox__carousel__item' key={index}>
-              <img alt='poster' src={poster.movieImage} />
+              <img alt='poster' src={movieImage} />
               <div className='moviebox__carousel__item__poster'>
                 <PosterTitle>
-                  {poster.movieTitle}
+                  {movieTitle}
                   <Link
-                    to={`/movie/${poster.movieId}`}
+                    to={`/movie/${movieId}`}
                     className='moviebox__carousel__item__link'
                   >
                     {SeeMoreKey}
@@ -37,7 +39,8 @@ const MovieCarousel: React.FC<ICarouselProps> = (props: ICarouselProps) => {
                 </PosterTitle>
               </div>
             </div>
-          ))}
+          );
+        })}
       </Carousel>
     </div>
   );
