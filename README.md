@@ -26,7 +26,6 @@ Libraries used:
 
 ```
 ├── src/
-│   ├── app
 │   ├── components
 │   │       ├── carousel
 │   │       ├── categories
