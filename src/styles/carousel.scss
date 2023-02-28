@@ -24,6 +24,24 @@
             &__poster {
                 position: absolute;
                 bottom: 40px;
+                width: 100%;
+                max-width: 960px;
+
+                @include mq("tablet-wide", "max") {
+                    max-width: 750px;
+                }
+
+                @include mq("tablet", "max") {
+                    max-width: 550px;
+                }
+
+                @include mq("tablet-small", "max") {
+                    max-width: 400px;
+                }
+
+                @include mq("phone-wide", "max") {
+                    max-width: 280px;
+                }
             }
 
             &__link {
@@ -47,6 +65,7 @@
             &-wrapper {
                 position: relative;
                 margin: 0 auto !important;
+                padding: 9px 0 0 0;
                 width: 100%;
                 background: linear-gradient(261deg, rgba(7,41,99,1) 0%, rgba(36,36,205,1) 35%, rgba(0,212,255,1) 100%);
                 overflow: hidden;

@@ -33,7 +33,7 @@
                 transition: 0.4s border ease-in-out;
 
                 @include mq("phone-wide", "max") {
-                    width: 190px;
+                    width: 175px;
                 }
 
                 .box-overlay {
@@ -67,7 +67,7 @@
                     &__description {
                         display: -webkit-box;
                         max-width: 200px;
-                        -webkit-line-clamp: 8;
+                        -webkit-line-clamp: 6;
                         -webkit-box-orient: vertical;
                         overflow: hidden;
                         margin: 0;

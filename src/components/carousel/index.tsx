@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { Carousel } from 'react-responsive-carousel';
 import { ICarouselProps, SeeMoreKey } from '../../model/common';
 import PosterTitle from '../posterTitle';
-import Container from '../container';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const MovieCarousel: React.FC<ICarouselProps> = (props: ICarouselProps) => {
@@ -26,10 +25,7 @@ const MovieCarousel: React.FC<ICarouselProps> = (props: ICarouselProps) => {
           posters.map((poster, index) => (
             <div className='moviebox__carousel__item' key={index}>
               <img alt='poster' src={poster.movieImage} />
-              <Container
-                className='moviebox__carousel__item__poster'
-                justifyContent='space-between'
-              >
+              <div className='moviebox__carousel__item__poster'>
                 <PosterTitle>
                   {poster.movieTitle}
                   <Link
@@ -39,7 +35,7 @@ const MovieCarousel: React.FC<ICarouselProps> = (props: ICarouselProps) => {
                     {SeeMoreKey}
                   </Link>
                 </PosterTitle>
-              </Container>
+              </div>
             </div>
           ))}
       </Carousel>

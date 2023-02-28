@@ -23,6 +23,9 @@ const PosterTitle: React.FC<IPosterTitleProps> = (props) => {
     font-weight: bold;
     text-align: center;
     opacity: 1;
+    @media (max-width: 480px) {
+      flex-direction: column;
+    }
   `;
 
   return <PosterTitleElement {...rest}>{children}</PosterTitleElement>;

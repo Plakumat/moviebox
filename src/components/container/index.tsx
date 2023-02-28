@@ -22,7 +22,7 @@ const Container: React.FC<IContainerProps> = (props) => {
     justify-content: ${justifyContent};
     flex-direction: ${flexDirection};
     align-items: ${alignItems};
-    margin: ${fullWidth ? '0' : '0 20px'};
+    padding: ${fullWidth ? '0' : '0 10px'};
     width: 100%;
     max-width: ${fullWidth ? '100%' : '960px'};
   `;
