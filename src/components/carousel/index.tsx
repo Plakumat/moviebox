@@ -5,6 +5,11 @@ import { ICarouselProps, SeeMoreKey } from '../../model/common';
 import PosterTitle from '../posterTitle';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
+/**
+ *
+ * @param props
+ * @returns
+ */
 const MovieCarousel: React.FC<ICarouselProps> = (props: ICarouselProps) => {
   const { posters } = props;
 

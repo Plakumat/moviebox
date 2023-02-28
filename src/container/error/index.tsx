@@ -1,6 +1,11 @@
 import { useRouteError } from 'react-router-dom';
 import { IErrorResponse } from '../../model/common';
 
+/**
+ *
+ * @param error
+ * @returns
+ */
 const errCheck = (error: any): error is IErrorResponse => {
   return 'data' in error && 'status' in error && 'statusText' in error;
 };
