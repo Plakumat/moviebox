@@ -1,10 +1,19 @@
 .moviebox {
     &__header {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: row;
-        justify-content: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         width: 100%;
         height: 50px;
+        background: -webkit-gradient(linear, left top, right top, from(rgba(32,28,94,1)), color-stop(35%, rgba(9,9,121,1)), to(rgba(0,212,255,1)));
+        background: -o-linear-gradient(left, rgba(32,28,94,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
         background: linear-gradient(90deg, rgba(32,28,94,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
 
         &-skeleton {
@@ -13,9 +22,15 @@
         }
 
         &__navigation {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
         }
 
         &__link {
@@ -28,15 +43,20 @@
     }
 
     &__logo {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         text-decoration: none;
         color: $white;
 
         img {
             width: 25px;
             height: 25px;
-            object-fit: contain;
+            -o-object-fit: contain;
+               object-fit: contain;
         }
 
         &__title {

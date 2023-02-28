@@ -1,8 +1,22 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .moviebox {
     &__categories {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: row;
-        justify-content: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         padding: 20px 0 40px;
         width: 100%;
         background-color: $black;
@@ -23,13 +37,20 @@
 
             &__box {
                 position: relative;
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
-                flex-direction: column;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
                 border: 2px solid $white;
                 border-radius: 4px;
                 width: 220px;
                 height: 388px;
                 overflow: hidden;
+                -webkit-transition: 0.4s border ease-in-out;
+                -o-transition: 0.4s border ease-in-out;
                 transition: 0.4s border ease-in-out;
 
                 @include mq("phone-wide", "max") {
@@ -41,9 +62,16 @@
                     bottom: 0;
                     left: 0;
                     z-index: 4;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
                     display: flex;
-                    flex-direction: column;
-                    justify-content: center;
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                        -ms-flex-direction: column;
+                            flex-direction: column;
+                    -webkit-box-pack: center;
+                        -ms-flex-pack: center;
+                            justify-content: center;
                     width: 100%;
                     height: 100%;
                     color: $white;
@@ -51,6 +79,8 @@
                     text-align: center;
                     visibility: hidden;
                     opacity: 0;
+                    -webkit-transition: visibility 0.4s, opacity 0.4s ease-in-out;
+                    -o-transition: visibility 0.4s, opacity 0.4s ease-in-out;
                     transition: visibility 0.4s, opacity 0.4s ease-in-out;
 
                     &__title, &__description, &__score {
@@ -76,6 +106,8 @@
 
                     &__see-more {
                         text-decoration: none;
+                        -webkit-transition: color 0.4s ease-in-out;
+                        -o-transition: color 0.4s ease-in-out;
                         transition: color 0.4s ease-in-out;
 
                         &:hover {
@@ -102,9 +134,15 @@
             &__info {
                 background-color: $dark-gray;
                 height: 50px;
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
-                justify-content: center;
-                align-items: center;
+                -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                        justify-content: center;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
 
                 .movie-name {
                     margin: 0;
@@ -120,7 +158,8 @@
             &__poster {
                 width: 220px;
                 height: auto;
-                object-fit: cover;
+                -o-object-fit: cover;
+                   object-fit: cover;
             }
 
             .react-multiple-carousel__arrow {

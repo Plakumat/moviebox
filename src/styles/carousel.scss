@@ -9,16 +9,25 @@
 
         &__item {
             position: relative;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             cursor: all-scroll;
 
             img {
                 width: 100%;
                 height: 500px;
-                object-fit: cover;
-                filter: brightness(65%);
+                -o-object-fit: cover;
+                   object-fit: cover;
+                -webkit-filter: brightness(65%);
+                        filter: brightness(65%);
             }
 
             &__poster {
@@ -67,12 +76,13 @@
                 margin: 0 auto !important;
                 padding: 9px 0 0 0;
                 width: 100%;
+                background: -o-linear-gradient(189deg, rgba(7,41,99,1) 0%, rgba(36,36,205,1) 35%, rgba(0,212,255,1) 100%);
                 background: linear-gradient(261deg, rgba(7,41,99,1) 0%, rgba(36,36,205,1) 35%, rgba(0,212,255,1) 100%);
                 overflow: hidden;
             }
         }
 
-        //TODO: Important used for override of Carousel Component
+        /* TODO: Important used for override of Carousel Component */
         .carousel .control-arrow {
             top: 13px !important;
             padding: 0 5px;

@@ -9,6 +9,8 @@ $rem-baseline: 16;
 	font-size: math.div($size, $rem-baseline) + rem;
 	line-height: ($line) + px;
 	line-height: math.div($line, $rem-baseline) + rem;
-	font-feature-settings: "kern"1;
-	font-kerning: normal;
+	-webkit-font-feature-settings: "kern"1;
+	        font-feature-settings: "kern"1;
+	-webkit-font-kerning: normal;
+	        font-kerning: normal;
 }

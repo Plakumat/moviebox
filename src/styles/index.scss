@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import "variables";
 @import "mixin";
 @import "categories";
@@ -14,7 +21,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   @include font-size(17);
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 code {
@@ -27,7 +35,6 @@ code {
 	padding: 0;
 
 	-webkit-box-sizing: border-box !important;
-	-moz-box-sizing: border-box !important;
 	-ms-box-sizing: border-box !important;
 	box-sizing: border-box !important;
 }
